@@ -6,6 +6,18 @@ if(argvs.length < 2) {
     process.exit(1);
 }
 
+function readObjectFromFile(path, callback){
+    var fs = require('fs');
+    var obj;
+    fs.readFile(path, 'utf8', function (err, data) {
+    if (err) throw err;
+        obj = JSON.parse(data);
+        callback(obj);
+    });
+}
+
+readObjectFromFile('teste.json', (obj) => console.log(obj));
+
 var device_conf_file = argvs[0];
 var csv_dest_file = argvs[1];
 

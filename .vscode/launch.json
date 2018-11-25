@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceFolder}/index.js",
-            "args": ["test", "file2.csv"]
+            "args": ["teste.txt", "file2.csv"]
         }
     ]
 }
